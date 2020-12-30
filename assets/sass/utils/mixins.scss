@@ -1,0 +1,102 @@
+@mixin font-primary {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin font-secondary {
+    font-family: 'Roboto', cursive;
+}
+
+@mixin p-size {
+    font-size: 0.9em;
+}
+
+@mixin padding-section {
+    padding: 50px 0 50px 0;
+}
+
+@mixin header {
+    width: 100%;
+    margin: auto;
+    padding: 10px 0 10px 0;
+    & h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    & img{
+        width: 150px;
+    }
+}
+
+@mixin box-shadow {
+    box-shadow: 0rem .2rem .2rem darken($color: $background-primary, $amount: 10);
+}
+
+@mixin bloc-radius {
+    border-radius: 20px;
+}
+
+@mixin button {
+    background: linear-gradient($color-secondary, $color-primary);
+    opacity: .8;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: darken($color: #EAEAEA, $amount: 20) 0rem .2rem 0.3rem;
+    color: $color-button;
+}
+
+@mixin number-radius {
+    border-radius: 50px;
+    padding: 3px 7px 2px 7px;
+    background-color: $color-primary;
+    color: $color-button;
+    font-weight: 300;
+}
+
+@mixin bloc-fonction {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90%;
+    margin: auto;
+    background-color: $background-primary;
+    padding: 20px;
+    margin-bottom: 20px;
+    @include box-shadow;
+    @include bloc-radius;
+}
+
+@mixin img-resto {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 10px 10px 0 0;
+}
+
+@mixin footer {
+    background-color: $background-tertiary;
+    color: $color-button;
+    padding: 20px;
+    & h2 {
+        font-family: 'Shrikhand', cursive;
+    }
+    & ul {
+        list-style: none;
+        & li{
+            @include p-size;
+            font-weight: 300;
+            padding-bottom: 5px;
+            & img {
+                width: 10px;
+                padding-right: 5px;
+            }
+        }
+    }
+    & a{
+        color: $color-button;
+        text-decoration: none;
+    }
+}

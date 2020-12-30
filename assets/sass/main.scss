@@ -1,3 +1,148 @@
-$color-primary : #15AE;
-$color-secondary : #ef34c0;
+@import "utils/variables.scss";
+@import "utils/mixins.scss";
 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    @include font-secondary;
+    @include p-size;
+}
+
+h2{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+p{
+    font-weight: 100;
+}
+
+section {
+    @include padding-section;
+}
+
+header {
+    @include header;
+}
+
+.loc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-shadow: inset 0rem .2rem .2rem  darken($color: #eaeaea, $amount: 15);
+    background-color: $background-secondary;
+    & img {
+        height: 15px;
+    }
+    & input{
+        background-color: $background-secondary;
+        border: none;
+        padding: 10px;
+        font-weight: 500;
+    }
+}
+
+.search{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $background-primary;
+    &__pitch {
+        width: 80%;
+        margin: auto;
+        & p{
+            @include p-size;
+            margin-bottom: 20px;
+        }
+        & button {
+            @include button;
+        }
+    }
+}
+
+.fonction {        
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__bloc{
+        @include bloc-fonction;
+        align-items: center;
+        &__number{
+            @include number-radius;
+            position: relative ;
+            top: 50%;
+            left: -30px;
+        }
+        & img {
+            padding-right: 20px;
+            width: 15px;
+            height: 15px;
+        }
+        & p {
+            font-weight: 500;
+        }
+        &--purple {
+            background-color: #F5EDFF;
+        }
+    }
+}
+
+.resto {
+    width: 100%;
+    background-color: $background-primary;
+    &__cartes{
+        display: flex;
+        flex-direction: column;
+        & a{
+            text-decoration: none;
+        }
+        &__single {
+            width: 90%;
+            margin: auto;
+            background-color: #ffff;
+            padding-bottom: 10px;
+            &__img {
+                @include img-resto;
+            }
+            &__encart{
+                float: right;
+                width: 70px;
+                margin: 0;
+                padding: 5px;
+                background-color: $color-tertiary;
+                color: darken($color: $color-tertiary, $amount: 30);
+                border-radius: 3px;
+                position: absolute;
+                margin-top: 10px;
+                right: 30px;
+                & p {
+                    font-weight: 500;
+                    text-align: center;
+                }
+            }
+            &__text{
+                padding: 2px;
+                color: black;
+            }
+            &__heart{
+                width: 20px;
+                float: right;
+                margin-top: -30px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+footer {
+@include footer;
+}

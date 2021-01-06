@@ -29,6 +29,22 @@ header {
     @include header;
 }
 
+.headerbis {
+    @include header;
+    & .arrow {
+        position: absolute;
+        left: 10px;
+        top: 14px;
+        width: 15px;
+    }
+}
+
+footer {
+    @include footer;
+    }
+
+// DEBUT PAGE INDEX
+
 .loc {
     display: flex;
     justify-content: center;
@@ -63,6 +79,9 @@ header {
         }
         & button {
             @include button;
+            &:hover{
+                background: lighten($color: $color-primary, $amount: 10);
+            }
         }
     }
 }
@@ -73,7 +92,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    &__bloc{
+    &__bloc__solo{
         @include bloc-fonction;
         align-items: center;
         &__number{
@@ -96,9 +115,28 @@ header {
     }
 }
 
+@media (min-width:680px) and (max-width:1500px)
+{
+.fonction {
+    width: 90%;
+    &__bloc {
+        display: flex;
+       flex-direction: row;
+       width: 100%;
+       &__solo{
+           margin-right: 20px;
+       }
+    }
+}
+}
+
 .resto {
     width: 100%;
     background-color: $background-primary;
+    & h2{
+        width: 90%;
+        margin: auto;
+    }
     &__cartes{
         display: flex;
         flex-direction: column;
@@ -108,8 +146,11 @@ header {
         &__single {
             width: 90%;
             margin: auto;
+            margin-top: 20px;
             background-color: #ffff;
             padding-bottom: 10px;
+            @include bloc-radius;
+            @include box-shadow;
             &__img {
                 @include img-resto;
             }
@@ -130,19 +171,136 @@ header {
                 }
             }
             &__text{
-                padding: 2px;
+                padding: 5px;
                 color: black;
             }
             &__heart{
-                width: 20px;
-                float: right;
-                margin-top: -30px;
-                margin-right: 20px;
+                @include btn-heart;
             }
         }
     }
 }
 
-footer {
-@include footer;
+@media (min-width:680px) and (max-width:1500px)
+{
+.resto__cartes{
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+    &__single{
+        width: 280px;
+        margin-right: 20px;
+        &__encart{
+            position: absolute;
+            z-index: 999;
+        }
+    }
+}
+}
+
+// DEBUT PAGE 2
+
+.diapo{
+   width: 100%;
+   height: 300px;
+   z-index: 0;
+   background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+   background-size: cover;
+   background-position: center;
+   & img{
+       width: 100%;
+       height: 200px;
+       z-index: 0;
+   }
+}
+
+.menu {
+    padding: 5%;
+    margin: auto;
+    background-color: $background-primary;
+    border-radius: 50px 50px 0px 0px;
+    z-index: 1;
+    margin-top: -50px;
+    &__h2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        & img{
+            margin: 0px 20px 20px 0px;
+            width: 20px;
+        }
+    }
+    & h2 {
+        font-family: 'Shrikhand', cursive;
+    }
+    & h3 {
+        font-weight: 300;
+        width: 40px;
+        border-bottom: $color-tertiary 3px solid;
+        margin: 10px 0px 10px 0px;
+        line-height: 2;
+    }
+    & h4{
+        line-height: 1.5;
+        @include césure;
+    }
+    & p{
+        @include césure;
+        font-size: 0.9em;
+        height: 15px;
+    }
+    &__bloc{
+        @include bloc-repas;
+        &__prix {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &--bold{
+                font-weight: 500;
+                margin-left: 10px;
+            }
+        }
+    }
+    .btn__center{
+       display: flex;
+       justify-content: center;
+       margin: 50px 0 30px 0;
+        & button {
+            @include button;
+        }
+    }
+}
+
+@media (min-width:950px) and (max-width:1099px)
+{
+.diapo{
+    width: 100%;
+    height: 400px;
+}
+.menu__article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+.menu__bloc{
+    width: 250px;
+}
+}
+@media (min-width:1100px) and (max-width:1500px)
+{
+.diapo{
+    width: 100%;
+    height: 500px;
+}
+.menu__article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+.menu__bloc{
+    width: 300px;
+}
 }

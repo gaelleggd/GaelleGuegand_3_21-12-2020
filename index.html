@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Oh My Food</title>
+</head>
+<body>
+
+    <header> <!--Début du Header-->
+       <h1><img src="assets/images/logo/ohmyfood@2x.svg" alt="logo du site"></h1>
+    </header>  <!--Fin du Header-->
+
+    <div class="loc">
+        <img src="assets/images/icones/location.svg" alt="icone de localisation">
+        <input type="text" id="lieu" name="lieu" placeholder="Paris, Belleville" required minlength="4" maxlength="12" size="15">
+    </div>
+
+    <section class="search">  <!-- Section de recherche -->
+        <div class="search__pitch">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <button>Explorer nos restaurants</button>
+        </div>
+    </section> <!-- Fin de la section de recherche -->
+
+    <section class="fonction"> <!-- Section de Fonctionnement -->
+        <h2>Fonctionnement</h2>
+        <div class="fonction__bloc">
+            <div class="fonction__bloc__solo">
+                <p class="fonction__bloc__solo__number">1</p>
+                <img src="assets/images/icones/mobile.svg" alt="Icone de mobile">
+                <p>Choisissez un restaurant</p>
+            </div>
+            <div class="fonction__bloc__solo">
+                <p class="fonction__bloc__solo__number">2</p>
+                <img src="assets/images/icones/list.svg" alt="Icone de mobile">
+                <p>Composez votre menu</p>
+            </div>
+            <div class="fonction__bloc__solo fonction__bloc__solo--purple">
+                <p class="fonction__bloc__solo__number">3</p>
+                <img src="assets/images/icones/store.svg
+                " alt="Icone de mobile">
+                <p>Dégustez au restaurant</p>
+            </div>
+        </div>
+    </section> <!-- Fin de la section de Fonctionnement -->
+
+    <section class="resto"> <!-- Section des restaurants -->
+        <h2>Restaurants</h2>
+        <article class="resto__cartes">
+            <div class="resto__cartes__single">
+                <a href="#">
+                    <div class="resto__cartes__single__encart">
+                    <span>Nouveau</span>
+                    </div>
+                    <img class="resto__cartes__single__img" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'une assiette au restaurant">
+                </a>
+                <h3 class="resto__cartes__single__text">La palette du goût</h3>
+                <p class="resto__cartes__single__text">Ménilmontant</p>
+                <button class="resto__cartes__single__heart"><img  src="assets/images/icones/heart.svg" alt="icone de coeur"></button> 
+            </div>
+            
+            <div class="resto__cartes__single">
+                <a href="#">
+                    <div class="resto__cartes__single__encart">
+                        <p>Nouveau</p>
+                    </div>
+                    <img class="resto__cartes__single__img" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'une assiette au restaurant" width="100">
+                </a>
+                <h3 class="resto__cartes__single__text">La note enchantée</h3>
+                <p class="resto__cartes__single__text">Charonne</p>
+                <img class="resto__cartes__single__heart" src="assets/images/icones/heart.svg" alt="icone de coeur" width="10">
+            </div>
+            
+            <div class="resto__cartes__single">
+                <a href="menu_1.html">
+                    <img class="resto__cartes__single__img" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'une assiette au restaurant" width="100">
+                </a>
+                <h3 class="resto__cartes__single__text">À la française</h3>
+                <p class="resto__cartes__single__text">Cité rouge</p>
+                <img class="resto__cartes__single__heart" src="assets/images/icones/heart.svg" alt="icone de coeur" width="10">
+            </div>
+            
+            <div class="resto__cartes__single">
+                <a href="#">
+                    <img class="resto__cartes__single__img" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'une assiette au restaurant" width="100">
+                </a>
+                <h3 class="resto__cartes__single__text">Le délice des sens</h3>
+                <p class="resto__cartes__single__text">Folie-méricourt</p>
+                <img class="resto__cartes__single__heart" src="assets/images/icones/heart.svg" alt="icone de coeur" width="10">
+            </div>
+            
+        </article>
+    </section> <!-- Fin de la section des restaurants -->
+
+    <footer> <!-- Début du footer -->
+        <h2>ohmyfood</h2>
+        <ul>
+            <li><img src="assets/images/icones/utensils.svg" alt="icone d'ustensils"> Proposer un restaurant</li>
+            <li><img src="assets/images/icones/hands.svg" alt="icone de poignée de mains">Devenir partenaire</li>
+            <li>Mentions légales</li>
+            <li> <a href="mailto:contact@ohmyfood.com">Contact</a></li>
+        </ul>
+    </footer> <!-- Fin du footer -->
+
+</body>
+</html>

@@ -1,3 +1,43 @@
+@keyframes grow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@keyframes spinner {
+  0% {
+    background: #99E2D0;
+    opacity: 1;
+    z-index: 1;
+  }
+  60% {
+    background: #99E2D0;
+    opacity: 1;
+    z-index: 1;
+  }
+  70% {
+    background: #99E2D0;
+    opacity: 0.9;
+    z-index: 1;
+  }
+  80% {
+    background: #99E2D0;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  100% {
+    background: #99E2D0;
+    opacity: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -80,6 +120,67 @@ footer ul li img {
 footer a {
   color: #ffff;
   text-decoration: none;
+}
+
+.wait {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff;
+  width: 100%;
+  height: 100%;
+  color: #ffff;
+  font-size: 1.5em;
+  z-index: -1;
+  animation: spinner 3s;
+  animation-iteration-count: 1;
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+}
+
+.loader-bars:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -12px;
+  width: 5px;
+  height: 30px;
+  background-color: #ffff;
+  animation: grow 1.5s linear infinite backwards alternate;
+  left: -40px;
+}
+
+.loader-bars:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -12px;
+  width: 5px;
+  height: 30px;
+  background-color: #ffff;
+  animation: grow 1.5s linear infinite backwards alternate;
+  left: -30px;
+  animation: grow 1.5s linear -0.5s infinite;
+}
+
+.loader-bars span {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -12px;
+  width: 5px;
+  height: 30px;
+  background-color: #ffff;
+  animation: grow 1.5s linear infinite backwards alternate;
+  left: -20px;
+  animation: grow 1.5s linear -1s infinite;
 }
 
 .loc {
@@ -204,6 +305,7 @@ footer a {
   text-decoration: none;
 }
 .resto__cartes__single {
+  position: relative;
   width: 90%;
   margin: auto;
   margin-top: 20px;
@@ -219,21 +321,18 @@ footer a {
   object-position: center;
   border-radius: 10px 10px 0 0;
 }
-.resto__cartes__single__encart {
-  float: right;
-  width: 70px;
-  margin: 0;
+.resto__cartes__single__new {
   padding: 5px;
   background-color: #99E2D0;
   color: #32b091;
   border-radius: 3px;
   position: absolute;
-  margin-top: 10px;
-  right: 30px;
+  right: 12px;
+  top: 13px;
 }
-.resto__cartes__single__encart p {
-  font-weight: 500;
-  text-align: center;
+.resto__cartes__single__text {
+  padding: 5px 10px 5px 10px;
+  color: black;
 }
 .resto__cartes__single__flex {
   display: flex;
@@ -257,10 +356,6 @@ footer a {
   transform: scale(0);
   transition: transform 1s 50ms ease-in-out;
 }
-.resto__cartes__single__text {
-  padding: 5px 10px 5px 10px;
-  color: black;
-}
 
 @media (min-width: 680px) and (max-width: 1500px) {
   .resto__cartes {
@@ -273,10 +368,6 @@ footer a {
   .resto__cartes__single {
     width: 280px;
     margin-right: 20px;
-  }
-  .resto__cartes__single__encart {
-    position: absolute;
-    z-index: 999;
   }
 }
 .diapo {

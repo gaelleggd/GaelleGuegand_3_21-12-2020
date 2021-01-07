@@ -139,3 +139,14 @@
         transition: transform 5s 5s ease-in-out;
 }
 
+@mixin load{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -12px;
+    width: 5px;
+    height: 30px;
+    background-color:$color-button;
+    animation: grow 1.5s linear infinite backwards alternate;
+}
+

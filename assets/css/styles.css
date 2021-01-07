@@ -118,17 +118,17 @@ footer a {
 }
 .search__pitch button {
   background: linear-gradient(#ef34c0, #9356DC);
-  opacity: 0.8;
   padding: 15px;
   border-radius: 30px;
   border: none;
-  box-shadow: #b7b7b7 0rem 0.2rem 0.3rem;
+  box-shadow: 0rem 0.2rem 0.2rem #dddddd;
   color: #ffff;
   width: 180px;
   cursor: pointer;
 }
 .search__pitch button:hover {
-  background: #ae80e5;
+  background: linear-gradient(#f363cf, #ae80e5);
+  box-shadow: 0rem 0.2rem 0.2rem #909090;
 }
 
 .fonction {
@@ -169,8 +169,10 @@ footer a {
 .fonction__bloc__solo p {
   font-weight: 500;
 }
-.fonction__bloc__solo--purple {
+.fonction__bloc__solo:hover {
   background-color: #F5EDFF;
+  cursor: pointer;
+  box-shadow: 0rem 0.2rem 0.2rem #909090;
 }
 
 @media (min-width: 680px) and (max-width: 1500px) {
@@ -233,18 +235,31 @@ footer a {
   font-weight: 500;
   text-align: center;
 }
-.resto__cartes__single__text {
-  padding: 5px;
-  color: black;
+.resto__cartes__single__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
 }
-.resto__cartes__single__heart {
-  border: none;
-  width: 20px;
-  background: none;
-  float: right;
-  margin-top: -30px;
-  margin-right: 20px;
-  z-index: 99;
+.resto__cartes__single__flex .empty {
+  position: relative;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.resto__cartes__single__flex .empty:hover > .full {
+  transform: scale(1);
+}
+.resto__cartes__single__flex .empty .full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ef34c0;
+  transform: scale(0);
+  transition: transform 1s 50ms ease-in-out;
+}
+.resto__cartes__single__text {
+  padding: 5px 10px 5px 10px;
+  color: black;
 }
 
 @media (min-width: 680px) and (max-width: 1500px) {
@@ -343,11 +358,10 @@ footer a {
 }
 .menu .btn__center button {
   background: linear-gradient(#ef34c0, #9356DC);
-  opacity: 0.8;
   padding: 15px;
   border-radius: 30px;
   border: none;
-  box-shadow: #b7b7b7 0rem 0.2rem 0.3rem;
+  box-shadow: 0rem 0.2rem 0.2rem #dddddd;
   color: #ffff;
   width: 180px;
   cursor: pointer;

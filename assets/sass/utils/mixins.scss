@@ -33,17 +33,20 @@
     box-shadow: 0rem .2rem .2rem darken($color: $background-primary, $amount: 10);
 }
 
+@mixin box-shadow-dark {
+    box-shadow: 0rem .2rem .2rem darken($color: $background-primary, $amount: 40);
+}
+
 @mixin bloc-radius {
     border-radius: 20px;
 }
 
 @mixin button {
     background: $mix-color;
-    opacity: .8;
     padding: 15px;
     border-radius: 30px;
     border: none;
-    box-shadow: darken($color: #EAEAEA, $amount: 20) 0rem .2rem 0.3rem;
+    @include box-shadow;
     color: $color-button;
     width: 180px;
     cursor: pointer;
@@ -127,3 +130,12 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+@mixin heart-full {
+        background: -o-linear-gradient(280deg, #FF79DA, #9356DC);
+        background: linear-gradient(170deg, #FF79DA, #9356DC );
+        transform: scale(0);
+        transition: -webkit-transform 150ms 50ms ease-in-out;
+        transition: transform 5s 5s ease-in-out;
+}
+

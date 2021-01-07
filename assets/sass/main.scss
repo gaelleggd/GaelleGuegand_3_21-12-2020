@@ -80,7 +80,8 @@ footer {
         & button {
             @include button;
             &:hover{
-                background: lighten($color: $color-primary, $amount: 10);
+                background: $mix-color-light;
+                @include box-shadow-dark;
             }
         }
     }
@@ -109,8 +110,10 @@ footer {
         & p {
             font-weight: 500;
         }
-        &--purple {
+        &:hover {
             background-color: #F5EDFF;
+            cursor: pointer;
+            @include box-shadow-dark;
         }
     }
 }
@@ -170,12 +173,31 @@ footer {
                     text-align: center;
                 }
             }
-            &__text{
-                padding: 5px;
-                color: black;
+            &__flex{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 10px 0px 10px;
+                & .empty{
+                    position: relative;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    &:hover > .full{
+                        transform: scale(1);
+                    }
+                    & .full{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: $color-secondary;
+                        transform: scale(0);
+                        transition: transform 1s 50ms ease-in-out;
+                    }
+                }
             }
-            &__heart{
-                @include btn-heart;
+            &__text{
+                padding: 5px 10px 5px 10px;
+                color: black;
             }
         }
     }

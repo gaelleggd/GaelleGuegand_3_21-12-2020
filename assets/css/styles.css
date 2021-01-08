@@ -144,6 +144,11 @@ header img {
   top: 14px;
   width: 15px;
 }
+@media (min-width: 700px) and (max-width: 1500px) {
+  .headerbis .arrow {
+    width: 20px;
+  }
+}
 
 footer {
   background-color: #353535;

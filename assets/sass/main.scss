@@ -98,11 +98,11 @@ footer {
     padding: 5px;
     box-shadow: inset 0rem .2rem .2rem  darken($color: #eaeaea, $amount: 15);
     background-color: $background-secondary;
-    & img {
-        height: 15px;
-        @media (min-width:700px) and (max-width:1500px){
-            height: 20px;
-        }
+    & i {
+        padding-right: 3px;
+        // @media (min-width:700px) and (max-width:1500px){
+        //     height: 20px;
+        // }
     }
     & input{
         background-color: $background-secondary;

@@ -255,13 +255,8 @@ footer a {
   box-shadow: inset 0rem 0.2rem 0.2rem #c4c4c4;
   background-color: #EAEAEA;
 }
-.loc img {
-  height: 15px;
-}
-@media (min-width: 700px) and (max-width: 1500px) {
-  .loc img {
-    height: 20px;
-  }
+.loc i {
+  padding-right: 3px;
 }
 .loc input {
   background-color: #EAEAEA;

@@ -14,12 +14,11 @@ body{
 }
 
 h2{
-    font-weight: 500;
-    margin-bottom: 20px;
+    @include h2;
 }
 
 p{
-    font-weight: 100;
+    @include p-size;
 }
 
 section {
@@ -86,6 +85,7 @@ footer {
     left: -20px;
     animation: grow 1.5s linear -1s infinite;
 }
+//fin loader en barres//
 
 .loc {
     display: flex;
@@ -96,6 +96,9 @@ footer {
     background-color: $background-secondary;
     & img {
         height: 15px;
+        @media (min-width:700px) and (max-width:1500px){
+            height: 20px;
+        }
     }
     & input{
         background-color: $background-secondary;
@@ -121,10 +124,6 @@ footer {
         }
         & button {
             @include button;
-            &:hover{
-                background: $mix-color-light;
-                @include box-shadow-dark;
-            }
         }
     }
 }
@@ -135,44 +134,46 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    &__bloc__solo{
-        @include bloc-fonction;
-        align-items: center;
-        &__number{
-            @include number-radius;
-            position: relative ;
-            top: 50%;
-            left: -30px;
+    @media (min-width:680px) and (max-width:1500px){
+        width: 90%;
+    }
+    &__bloc{
+        @media (min-width:680px) and (max-width:1500px){
+            display: flex;
+            flex-direction: row;
+            width: 100%;     
         }
-        & img {
-            padding-right: 20px;
-            width: 15px;
-            height: 15px;
-        }
-        & p {
-            font-weight: 500;
-        }
-        &:hover {
-            background-color: #F5EDFF;
-            cursor: pointer;
-            @include box-shadow-dark;
+        &__solo{
+            @include bloc-fonction;
+            align-items: center;
+            @media (min-width:680px) and (max-width:1500px){
+                margin-right: 20px;
+            }    
+            &__number{
+                @include number-radius;
+                position: relative ;
+                top: 50%;
+                left: -30px;
+            }
+            & i {
+                padding-right: 10px;
+                width: 15px;
+                height: 15px;
+                color: grey;
+            }
+            & p {
+                font-weight: 500;
+            }
+            &:hover {
+                background-color: #F5EDFF;
+                cursor: pointer;
+                @include box-shadow-dark;
+            }
+            &:hover > i{
+                color: $color-primary;
+            }
         }
     }
-}
-
-@media (min-width:680px) and (max-width:1500px)
-{
-.fonction {
-    width: 90%;
-    &__bloc {
-        display: flex;
-       flex-direction: row;
-       width: 100%;
-       &__solo{
-           margin-right: 20px;
-       }
-    }
-}
 }
 
 .resto {
@@ -185,6 +186,14 @@ footer {
     &__cartes{
         display: flex;
         flex-direction: column;
+        @media (min-width:900px) and (max-width:1500px){
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            // flex-wrap: wrap;
+            margin: auto;
+            width: 90%;        
+        }
         & a{
             text-decoration: none;
         }
@@ -197,6 +206,10 @@ footer {
             padding-bottom: 10px;
             @include bloc-radius;
             @include box-shadow;
+            @media (min-width:900px) and (max-width:1500px){
+                width: 280px;
+                margin-right: 20px;        
+            }
             &__img{
                 @include img-resto;
             }
@@ -204,6 +217,7 @@ footer {
                 padding: 5px;
                 background-color: $color-tertiary;
                 color: darken($color: $color-tertiary, $amount: 30);
+                font-weight: 500;
                 border-radius: 3px;
                 position: absolute;
                 right: 12px;
@@ -222,36 +236,31 @@ footer {
                     position: relative;
                     font-size: 1.2rem;
                     cursor: pointer;
-                    &:hover > .full{
-                        transform: scale(1);
-                    }
                     & .full{
                         position: absolute;
                         top: 0;
                         left: 0;
-                        color: $color-secondary;
-                        transform: scale(0);
-                        transition: transform 1s 50ms ease-in-out;
+                        opacity: 0;
+                        background: linear-gradient(to bottom, $color-primary, $color-secondary); 
+                        background: -webkit-linear-gradient(to bottom, $color-primary, $color-secondary);
+                        background: -moz-linear-gradient(to bottom, $color-primary, $color-secondary); 
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    &:hover {
+                        & .full {
+                            animation: fondu_heart 1800ms;
+                            animation-fill-mode: forwards;
+                        }
+                        & .empty {
+                            opacity: 0;
+                            transition: opacity 1800ms;
+                        }	
                     }
                 }
             }
         }
     }
-}
-
-@media (min-width:680px) and (max-width:1500px)
-{
-.resto__cartes{
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 90%;
-    &__single{
-        width: 280px;
-        margin-right: 20px;
-    }
-}
 }
 
 // DEBUT PAGE 2
@@ -268,6 +277,14 @@ footer {
        height: 200px;
        z-index: 0;
    }
+   @media (min-width:950px) and (max-width:1099px){
+    width: 100%;
+    height: 400px;
+    }
+    @media (min-width:1100px) and (max-width:1500px){
+        width: 100%;
+        height: 500px;
+    }
 }
 
 .menu {
@@ -278,6 +295,7 @@ footer {
     z-index: 1;
     margin-top: -50px;
     &__h2{
+        font-family: 'Shrikhand', cursive;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -287,9 +305,19 @@ footer {
             width: 20px;
         }
     }
-    & h2 {
-        font-family: 'Shrikhand', cursive;
+    &__article {
+        @media (min-width:950px) and (max-width:1099px){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        } 
+        @media (min-width:1100px) and (max-width:1500px){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        } 
     }
+
     & h3 {
         font-weight: 300;
         width: 40px;
@@ -317,6 +345,13 @@ footer {
                 margin-left: 10px;
             }
         }
+        @media (min-width:950px) and (max-width:1099px)
+        {
+            width: 250px;
+        }
+        @media (min-width:1100px) and (max-width:1500px){
+        width: 300px;
+        }
     }
     .btn__center{
        display: flex;
@@ -326,35 +361,4 @@ footer {
             @include button;
         }
     }
-}
-
-@media (min-width:950px) and (max-width:1099px)
-{
-.diapo{
-    width: 100%;
-    height: 400px;
-}
-.menu__article{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} 
-.menu__bloc{
-    width: 250px;
-}
-}
-@media (min-width:1100px) and (max-width:1500px)
-{
-.diapo{
-    width: 100%;
-    height: 500px;
-}
-.menu__article{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} 
-.menu__bloc{
-    width: 300px;
-}
 }

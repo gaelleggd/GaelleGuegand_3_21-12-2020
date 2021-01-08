@@ -73,6 +73,11 @@
         opacity: 0.8;
         @include box-shadow-dark;
     }
+    @media (min-width:1100px) and (max-width:1500px){
+        font-size: 1em;
+        width: 250px;
+        }          
+
 }
 
 @mixin number-radius {

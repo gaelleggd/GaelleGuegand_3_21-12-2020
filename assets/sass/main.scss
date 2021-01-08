@@ -232,38 +232,43 @@ footer {
                 justify-content: space-between;
                 align-items: center;
                 padding: 0px 10px 0px 10px;
-                & .empty{
-                    position: relative;
-                    font-size: 1.2rem;
-                    cursor: pointer;
-                    & .full{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        opacity: 0;
-                        background: linear-gradient(to bottom, $color-primary, $color-secondary); 
-                        background: -webkit-linear-gradient(to bottom, $color-primary, $color-secondary);
-                        background: -moz-linear-gradient(to bottom, $color-primary, $color-secondary); 
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-                    &:hover {
-                        & .full {
-                            animation: fondu_heart 1800ms;
-                            animation-fill-mode: forwards;
-                        }
-                        & .empty {
-                            opacity: 0;
-                            transition: opacity 1800ms;
-                        }	
-                    }
-                }
             }
         }
     }
 }
 
-// DEBUT PAGE 2
+// animation fondu coeur
+
+.empty{
+    position: relative;
+    font-size: 1.2rem;
+    cursor: pointer;
+    & .full{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background: linear-gradient(to bottom, $color-primary, $color-secondary); 
+        background: -webkit-linear-gradient(to bottom, $color-primary, $color-secondary);
+        background: -moz-linear-gradient(to bottom, $color-primary, $color-secondary); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &:hover {
+        & .full {
+            animation: fondu_heart 1800ms;
+            animation-fill-mode: forwards;
+        }
+        & .empty {
+            opacity: 0;
+            transition: opacity 1800ms;
+        }	
+    }
+}
+// fin animation fondu coeur
+
+
+// DEBUT PAGE MENU
 
 .diapo{
    width: 100%;
@@ -272,12 +277,7 @@ footer {
    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
    background-size: cover;
    background-position: center;
-   & img{
-       width: 100%;
-       height: 200px;
-       z-index: 0;
-   }
-   @media (min-width:950px) and (max-width:1099px){
+   @media (min-width:700px) and (max-width:1099px){
     width: 100%;
     height: 400px;
     }
@@ -296,28 +296,19 @@ footer {
     margin-top: -50px;
     &__h2{
         font-family: 'Shrikhand', cursive;
+        width: 95%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        & img{
-            margin: 0px 20px 20px 0px;
-            width: 20px;
-        }
     }
     &__article {
-        @media (min-width:950px) and (max-width:1099px){
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        } 
         @media (min-width:1100px) and (max-width:1500px){
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         } 
     }
-
     & h3 {
         font-weight: 300;
         width: 40px;
@@ -332,27 +323,84 @@ footer {
     & p{
         @include césure;
         font-size: 0.9em;
-        height: 15px;
     }
     &__bloc{
         @include bloc-repas;
-        &__prix {
+        position: relative;
+        &:hover &__text {
+            width: 83%;
+            @media (min-width:1100px) and (max-width:1500px){
+                width: 80%;
+                }          
+        }
+        &:hover .coche {
+            transform: scaleX(1);
+            opacity: 1;					
+        }
+        &:hover .coche .fa-check-circle {
+            transform: rotate(360deg);
+            transition: transform 800ms;
+        }
+        &__text {
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            &--bold{
-                font-weight: 500;
-                margin-left: 10px;
+            transform-origin: left 90%;
+            transition: width 800ms;
+            &__prix {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                & span{
+                    font-weight: 500;
+                    margin-left: 10px;
+                }
             }
-        }
-        @media (min-width:950px) and (max-width:1099px)
-        {
-            width: 250px;
+            & .coche {
+                background-color: $color-tertiary;
+                width: 60px;
+                height: 60px;
+                border-radius: 0 10px 10px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transform: scaleX(0);
+                transition: transform 800ms;
+                transform-origin: right 50%;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                    & .fa-check-circle {
+                        color: $color-button;
+                        transform: rotate(90deg);
+                    }
+            }
         }
         @media (min-width:1100px) and (max-width:1500px){
         width: 300px;
         }
     }
+    @media (min-width:700px) and (max-width:1099px)
+    {
+    width: 70%;
+    }
+
+    .fade{
+        animation: fondu 2s 300ms;
+        animation-fill-mode: backwards;
+    }
+    .fade--2{
+            animation: fondu 3s 300ms;
+        }
+    .fade--3{
+            animation: fondu 4s 300ms;
+        }
+
+
+
     .btn__center{
        display: flex;
        justify-content: center;

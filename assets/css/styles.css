@@ -46,6 +46,16 @@
     opacity: 1;
   }
 }
+@keyframes fondu {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -291,6 +301,12 @@ footer a {
   opacity: 0.8;
   box-shadow: 0rem 0.2rem 0.2rem #909090;
 }
+@media (min-width: 1100px) and (max-width: 1500px) {
+  .search__pitch button {
+    font-size: 1em;
+    width: 250px;
+  }
+}
 
 .fonction {
   width: 80%;
@@ -424,12 +440,13 @@ footer a {
   align-items: center;
   padding: 0px 10px 0px 10px;
 }
-.resto__cartes__single__flex .empty {
+
+.empty {
   position: relative;
   font-size: 1.2rem;
   cursor: pointer;
 }
-.resto__cartes__single__flex .empty .full {
+.empty .full {
   position: absolute;
   top: 0;
   left: 0;
@@ -440,11 +457,11 @@ footer a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.resto__cartes__single__flex .empty:hover .full {
+.empty:hover .full {
   animation: fondu_heart 1800ms;
   animation-fill-mode: forwards;
 }
-.resto__cartes__single__flex .empty:hover .empty {
+.empty:hover .empty {
   opacity: 0;
   transition: opacity 1800ms;
 }
@@ -457,12 +474,7 @@ footer a {
   background-size: cover;
   background-position: center;
 }
-.diapo img {
-  width: 100%;
-  height: 200px;
-  z-index: 0;
-}
-@media (min-width: 950px) and (max-width: 1099px) {
+@media (min-width: 700px) and (max-width: 1099px) {
   .diapo {
     width: 100%;
     height: 400px;
@@ -485,21 +497,11 @@ footer a {
 }
 .menu__h2 {
   font-family: "Shrikhand", cursive;
+  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-.menu__h2 img {
-  margin: 0px 20px 20px 0px;
-  width: 20px;
-}
-@media (min-width: 950px) and (max-width: 1099px) {
-  .menu__article {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 @media (min-width: 1100px) and (max-width: 1500px) {
   .menu__article {
@@ -526,7 +528,6 @@ footer a {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 0.9em;
-  height: 15px;
 }
 .menu__bloc {
   background-color: white;
@@ -535,25 +536,81 @@ footer a {
   padding: 10px;
   margin-bottom: 10px;
   height: 40px;
+  position: relative;
 }
-.menu__bloc__prix {
+.menu__bloc:hover .menu__bloc__text {
+  width: 83%;
+}
+@media (min-width: 1100px) and (max-width: 1500px) {
+  .menu__bloc:hover .menu__bloc__text {
+    width: 80%;
+  }
+}
+.menu__bloc:hover .coche {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.menu__bloc:hover .coche .fa-check-circle {
+  transform: rotate(360deg);
+  transition: transform 800ms;
+}
+.menu__bloc__text {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transform-origin: left 90%;
+  transition: width 800ms;
+}
+.menu__bloc__text__prix {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.menu__bloc__prix--bold {
+.menu__bloc__text__prix span {
   font-weight: 500;
   margin-left: 10px;
 }
-@media (min-width: 950px) and (max-width: 1099px) {
-  .menu__bloc {
-    width: 250px;
-  }
+.menu__bloc__text .coche {
+  background-color: #99E2D0;
+  width: 60px;
+  height: 60px;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 800ms;
+  transform-origin: right 50%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.menu__bloc__text .coche .fa-check-circle {
+  color: #ffff;
+  transform: rotate(90deg);
 }
 @media (min-width: 1100px) and (max-width: 1500px) {
   .menu__bloc {
     width: 300px;
   }
+}
+@media (min-width: 700px) and (max-width: 1099px) {
+  .menu {
+    width: 70%;
+  }
+}
+.menu .fade {
+  animation: fondu 2s 300ms;
+  animation-fill-mode: backwards;
+}
+.menu .fade--2 {
+  animation: fondu 3s 300ms;
+}
+.menu .fade--3 {
+  animation: fondu 4s 300ms;
 }
 .menu .btn__center {
   display: flex;
@@ -573,6 +630,12 @@ footer a {
 .menu .btn__center button:hover {
   opacity: 0.8;
   box-shadow: 0rem 0.2rem 0.2rem #909090;
+}
+@media (min-width: 1100px) and (max-width: 1500px) {
+  .menu .btn__center button {
+    font-size: 1em;
+    width: 250px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

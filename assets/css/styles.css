@@ -93,6 +93,11 @@ p {
   }
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 section {
   padding: 50px 0 50px 0;
 }
@@ -396,10 +401,6 @@ footer a {
     margin: auto;
     width: 90%;
   }
-}
-.resto__cartes a {
-  text-decoration: none;
-  color: black;
 }
 .resto__cartes__single {
   position: relative;

@@ -21,6 +21,12 @@ p{
     @include p-size;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
 section {
     @include padding-section;
 }
@@ -198,13 +204,8 @@ footer {
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
-            // flex-wrap: wrap;
             margin: auto;
             width: 90%;        
-        }
-        & a{
-            text-decoration: none;
-            color: black;
         }
         &__single {
             position: relative;

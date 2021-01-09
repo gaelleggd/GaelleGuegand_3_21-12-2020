@@ -31,15 +31,16 @@ header {
 
 .headerbis {
     @include header;
-    & .arrow {
+    & i {
         position: absolute;
-        left: 10px;
-        top: 14px;
-        width: 15px;
+        left: 15px;
+        top: 20px;
+        font-size: 1.5em;
+        color: black;
         @media (min-width:700px) and (max-width:1500px){
-            width: 20px;
+            font-size: 1.8em;
+            top: 16px;
         }
-
     }
 }
 
@@ -122,6 +123,9 @@ footer {
     &__pitch {
         width: 80%;
         margin: auto;
+        & h2{
+            @include margin-bas;
+        }
         & p{
             @include p-size;
             margin-bottom: 20px;
@@ -200,6 +204,7 @@ footer {
         }
         & a{
             text-decoration: none;
+            color: black;
         }
         &__single {
             position: relative;
@@ -278,7 +283,6 @@ footer {
    width: 100%;
    height: 300px;
    z-index: 0;
-   background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
    background-size: cover;
    background-position: center;
    @media (min-width:700px) and (max-width:1099px){
@@ -288,6 +292,18 @@ footer {
     @media (min-width:1100px) and (max-width:1500px){
         width: 100%;
         height: 500px;
+    }
+    &--1{
+        background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    }
+    &--2{
+        background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    }
+    &--3{
+        background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    }
+    &--4{
+        background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     }
 }
 
@@ -299,12 +315,18 @@ footer {
     z-index: 1;
     margin-top: -50px;
     &__h2{
+        @include h2;
         font-family: 'Shrikhand', cursive;
         width: 95%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        & .heart2{
+            @media (min-width:700px) and (max-width:1500px){
+                font-size: 1.2em;
+            }
+        }
     }
     &__article {
         @media (min-width:1100px) and (max-width:1500px){
@@ -377,10 +399,10 @@ footer {
                 position: absolute;
                 right: 0px;
                 top: 0px;
-                    & .fa-check-circle {
-                        color: $color-button;
-                        transform: rotate(90deg);
-                    }
+                & .fa-check-circle {
+                    color: $color-button;
+                    transform: rotate(90deg);
+                }
             }
         }
         @media (min-width:1100px) and (max-width:1500px){

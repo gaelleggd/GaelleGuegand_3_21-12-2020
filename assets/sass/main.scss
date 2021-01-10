@@ -65,7 +65,6 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center; 
-    background-color: $color-button;
     width: 100%;
     height: 100%;
     color: $color-button;
@@ -204,6 +203,7 @@ footer {
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
+            flex-wrap: wrap;
             margin: auto;
             width: 90%;        
         }
@@ -217,7 +217,7 @@ footer {
             @include bloc-radius;
             @include box-shadow;
             @media (min-width:900px) and (max-width:1500px){
-                width: 280px;
+                width: 45%;
                 margin-right: 20px;        
             }
             &__img{
@@ -349,13 +349,33 @@ footer {
     }
     & p{
         @include césure;
-        font-size: 0.9em;
     }
     &__bloc{
         @include bloc-repas;
         position: relative;
         &:hover &__text {
-            width: 83%;
+            width: 82%;
+            @media (min-width:320px) and (max-width:375px){
+                width: 78%;
+                }
+            @media (min-width:450px) and (max-width:499px){
+                width: 85%;
+                } 
+            @media (min-width:500px) and (max-width:599px){
+                width: 87%;
+                } 
+            @media (min-width:600px) and (max-width:699px){
+                width: 90%;
+                } 
+            @media (min-width:700px) and (max-width:799px){
+                width: 87%;
+                } 
+            @media (min-width:800px) and (max-width:999px){
+                width: 90%;
+                } 
+            @media (min-width:1000px) and (max-width:1099px){
+                width: 92%;
+                } 
             @media (min-width:1100px) and (max-width:1500px){
                 width: 80%;
                 }          

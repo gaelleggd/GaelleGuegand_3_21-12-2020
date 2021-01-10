@@ -208,9 +208,15 @@ footer a {
   height: 100%;
   color: #ffff;
   font-size: 1.5em;
+  font-weight: 500;
   z-index: -1;
   animation: spinner 3s;
   animation-iteration-count: 1;
+}
+@media (min-width: 200px) and (max-width: 449px) {
+  .wait {
+    font-size: 1.1em;
+  }
 }
 
 .loader {

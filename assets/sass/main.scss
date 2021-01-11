@@ -155,7 +155,7 @@ footer {
         width: 90%;
     }
     &__bloc{
-        @media (min-width:680px) and (max-width:1500px){
+        @media (min-width:750px) and (max-width:1500px){
             display: flex;
             flex-direction: row;
             width: 100%;     
@@ -163,9 +163,34 @@ footer {
         &__solo{
             @include bloc-fonction;
             align-items: center;
+            position: relative;
+            cursor: pointer;
+            z-index: 0;
             @media (min-width:680px) and (max-width:1500px){
                 margin-right: 20px;
-            }    
+            }
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &:hover > i{
+                color: $color-primary;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #F5EDFF;
+                @include bloc-radius;
+                @include box-shadow-dark;
+                opacity: 0;
+                z-index: -1;
+                transition: opacity 250ms;
+            }
             &__number{
                 @include number-radius;
                 position: relative ;
@@ -181,14 +206,11 @@ footer {
             & p {
                 font-weight: 500;
             }
-            &:hover {
-                background-color: #F5EDFF;
-                cursor: pointer;
-                @include box-shadow-dark;
-            }
-            &:hover > i{
-                color: $color-primary;
-            }
+            // &:hover {
+            //     background-color: #F5EDFF;
+            //     cursor: pointer;
+            //     @include box-shadow-dark;
+            // }
         }
     }
 }
@@ -266,11 +288,9 @@ footer {
         top: 0;
         left: 0;
         opacity: 0;
-        background: linear-gradient(to bottom, $color-primary, $color-secondary); 
-        background: -webkit-linear-gradient(to bottom, $color-primary, $color-secondary);
-        background: -moz-linear-gradient(to bottom, $color-primary, $color-secondary); 
+        background: linear-gradient(to bottom left, $color-primary, $color-secondary); 
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
     }
     &:hover {
         & .full {
@@ -361,6 +381,8 @@ footer {
     &__bloc{
         @include bloc-repas;
         position: relative;
+        cursor: pointer;
+        overflow: hidden;
         &:hover &__text {
             width: 82%;
             @media (min-width:320px) and (max-width:375px){
@@ -389,19 +411,18 @@ footer {
                 }          
         }
         &:hover .coche {
-            transform: scaleX(1);
-            opacity: 1;					
+            animation: check 800ms;
+            animation-fill-mode: forwards;
         }
         &:hover .coche .fa-check-circle {
             transform: rotate(360deg);
-            transition: transform 800ms;
+            transition: transform 1s;
         }
         &__text {
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            transform-origin: left 90%;
             transition: width 800ms;
             &__prix {
                 width: 100%;
@@ -414,23 +435,20 @@ footer {
                 }
             }
             & .coche {
-                background-color: $color-tertiary;
+                position: absolute;
+                right: 0px;
+                top: 0px;
                 width: 60px;
                 height: 60px;
                 border-radius: 0 10px 10px 0;
+                background-color: $color-tertiary;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 opacity: 0;
-                transform: scaleX(0);
-                transition: transform 800ms;
-                transform-origin: right 50%;
-                position: absolute;
-                right: 0px;
-                top: 0px;
                 & .fa-check-circle {
                     color: $color-button;
-                    transform: rotate(90deg);
+                    transform: rotate(0deg);
                 }
             }
         }

@@ -9,4 +9,9 @@ $background-tertiary : #353535;
 
 $mix-color : linear-gradient($color-secondary, $color-primary);
 
-$mix-color-light : linear-gradient(lighten($color-secondary, 5), lighten($color-primary, 5));
+$font-p-mobile : 1em;
+$font-p-plus : 1.1em;
+
+$font-h2-mobile : 1.2em;
+$font-h2-plus : 1.4em;
+

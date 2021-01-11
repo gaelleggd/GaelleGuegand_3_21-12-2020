@@ -4,8 +4,12 @@
   "description": "\"fichier npm\"",
   "main": "index.js",
   "scripts": {
-    "sass" :"sass --watch assets/sass/main.scss:assets/css/styles.css"
+    "sass": "sass --watch assets/sass/main.scss:assets/css/styles.css",
+    "prefix": "postcss assets/css/styles.css --use autoprefixer -d assets/css/prefixed/"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.2.1"
+  }
 }

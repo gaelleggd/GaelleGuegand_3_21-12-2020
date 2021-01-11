@@ -8,15 +8,10 @@
 
 @mixin h2 {
         font-weight: 500;
-        // margin-bottom: 20px;
-        font-size: 1.3em;
-        @media (min-width:320px) and (max-width:374px){
-            font-size: 1.2em;
-            }
-        @media (min-width:700px) and (max-width:1500px){
+        font-size: $font-h2-mobile;
+        @media (min-width:750px) and (max-width:1500px){
             font-weight: 500;
-            // margin-bottom: 20px;
-            font-size: 1.4em;
+            font-size: $font-h2-plus;
         }
 }
 
@@ -25,10 +20,10 @@
 }
 
 @mixin p-size {
-    font-size: 1em;
+    font-size: $font-p-mobile;
     font-weight: 100;
     @media (min-width:700px) and (max-width:1500px){
-        font-size: 1em;
+        font-size: $font-p-plus;
     }
 
 }

@@ -154,14 +154,14 @@ header img {
 .headerbis i {
   position: absolute;
   left: 15px;
-  top: 20px;
+  top: 15px;
   font-size: 1.5em;
   color: black;
 }
 @media (min-width: 700px) and (max-width: 1500px) {
   .headerbis i {
     font-size: 1.8em;
-    top: 16px;
+    top: 15px;
   }
 }
 

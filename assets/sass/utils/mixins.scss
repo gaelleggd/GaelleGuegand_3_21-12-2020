@@ -97,7 +97,7 @@ text-align: center;
     border: none;
     @include box-shadow;
     color: $color-button;
-    font-size: 1em;
+    font-size: $font-p-mobile;
     width: 220px;
     cursor: pointer;
     &:hover{
@@ -105,10 +105,9 @@ text-align: center;
         @include box-shadow-dark;
     }
     @media (min-width:700px) and (max-width:1500px){
-        font-size: 1em;
+        font-size: $font-p-plus;
         width: 250px;
-        }          
-
+        }
 }
 
 @mixin number-radius {

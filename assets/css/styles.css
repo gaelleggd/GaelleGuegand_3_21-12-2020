@@ -160,7 +160,7 @@ header img {
 }
 @media (min-width: 700px) and (max-width: 1500px) {
   .headerbis i {
-    font-size: 1.8em;
+    font-size: 1.7em;
     top: 15px;
   }
 }
@@ -327,7 +327,7 @@ footer a {
 }
 @media (min-width: 700px) and (max-width: 1500px) {
   .search__pitch button {
-    font-size: 1em;
+    font-size: 1.1em;
     width: 250px;
   }
 }
@@ -729,7 +729,7 @@ footer a {
 }
 @media (min-width: 700px) and (max-width: 1500px) {
   .menu .btn__center button {
-    font-size: 1em;
+    font-size: 1.1em;
     width: 250px;
   }
 }

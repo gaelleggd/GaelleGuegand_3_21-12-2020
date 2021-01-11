@@ -448,6 +448,9 @@ footer a {
   top: 13px;
 }
 .resto__cartes__single__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   padding: 5px 10px 5px 10px;
   color: black;
 }
@@ -460,6 +463,7 @@ footer a {
 
 .empty {
   position: relative;
+  top: 5px;
   font-size: 1.2rem;
   cursor: pointer;
 }

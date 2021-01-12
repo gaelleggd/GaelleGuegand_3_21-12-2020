@@ -76,7 +76,7 @@ body {
   font-size: 1em;
   font-weight: 100;
 }
-@media (min-width: 700px) and (max-width: 1500px) {
+@media (min-width: 700px) and (max-width: 1900px) {
   body {
     font-size: 1.1em;
   }
@@ -86,20 +86,10 @@ h2 {
   font-weight: 500;
   font-size: 1.2em;
 }
-@media (min-width: 750px) and (max-width: 1500px) {
+@media (min-width: 750px) and (max-width: 1900px) {
   h2 {
     font-weight: 500;
     font-size: 1.4em;
-  }
-}
-
-p {
-  font-size: 1em;
-  font-weight: 100;
-}
-@media (min-width: 700px) and (max-width: 1500px) {
-  p {
-    font-size: 1.1em;
   }
 }
 
@@ -126,7 +116,7 @@ header h1 {
 header img {
   width: 150px;
 }
-@media (min-width: 700px) and (max-width: 1500px) {
+@media (min-width: 700px) and (max-width: 1900px) {
   header img {
     width: 200px;
   }
@@ -146,7 +136,7 @@ header img {
 .headerbis img {
   width: 150px;
 }
-@media (min-width: 700px) and (max-width: 1500px) {
+@media (min-width: 700px) and (max-width: 1900px) {
   .headerbis img {
     width: 200px;
   }
@@ -158,7 +148,7 @@ header img {
   font-size: 1.5em;
   color: black;
 }
-@media (min-width: 700px) and (max-width: 1500px) {
+@media (min-width: 700px) and (max-width: 1900px) {
   .headerbis i {
     font-size: 1.7em;
     top: 15px;
@@ -170,7 +160,7 @@ footer {
   color: #ffff;
   padding: 20px;
 }
-@media (min-width: 650px) and (max-width: 1500px) {
+@media (min-width: 650px) and (max-width: 1900px) {
   footer {
     text-align: center;
   }
@@ -187,7 +177,7 @@ footer ul li {
   font-weight: 300;
   padding-bottom: 5px;
 }
-@media (min-width: 700px) and (max-width: 1500px) {
+@media (min-width: 700px) and (max-width: 1900px) {
   footer ul li {
     font-size: 1.1em;
   }
@@ -216,7 +206,6 @@ footer a {
   font-weight: 500;
   z-index: -1;
   animation: spinner 3s;
-  animation-iteration-count: 1;
 }
 @media (min-width: 200px) and (max-width: 449px) {
   .wait {
@@ -225,7 +214,6 @@ footer a {
 }
 
 .loader {
-  display: inline-block;
   position: relative;
 }
 
@@ -305,7 +293,7 @@ footer a {
   font-weight: 100;
   margin-bottom: 20px;
 }
-@media (min-width: 700px) and (max-width: 1500px) {
+@media (min-width: 700px) and (max-width: 1900px) {
   .search__pitch p {
     font-size: 1.1em;
   }
@@ -325,7 +313,7 @@ footer a {
   opacity: 0.8;
   box-shadow: 0rem 0.2rem 0.2rem #909090;
 }
-@media (min-width: 700px) and (max-width: 1500px) {
+@media (min-width: 700px) and (max-width: 1900px) {
   .search__pitch button {
     font-size: 1.1em;
     width: 250px;
@@ -339,12 +327,12 @@ footer a {
   flex-direction: column;
   justify-content: space-between;
 }
-@media (min-width: 680px) and (max-width: 1500px) {
+@media (min-width: 680px) and (max-width: 1900px) {
   .fonction {
     width: 90%;
   }
 }
-@media (min-width: 750px) and (max-width: 1500px) {
+@media (min-width: 750px) and (max-width: 1900px) {
   .fonction__bloc {
     display: flex;
     flex-direction: row;
@@ -367,7 +355,7 @@ footer a {
   cursor: pointer;
   z-index: 0;
 }
-@media (min-width: 680px) and (max-width: 1500px) {
+@media (min-width: 680px) and (max-width: 1900px) {
   .fonction__bloc__solo {
     margin-right: 20px;
   }
@@ -424,7 +412,7 @@ footer a {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 900px) and (max-width: 1500px) {
+@media (min-width: 900px) and (max-width: 1900px) {
   .resto__cartes {
     flex-direction: row;
     justify-content: space-between;
@@ -444,7 +432,7 @@ footer a {
   border-radius: 20px;
   box-shadow: 0rem 0.2rem 0.2rem #dddddd;
 }
-@media (min-width: 900px) and (max-width: 1500px) {
+@media (min-width: 900px) and (max-width: 1900px) {
   .resto__cartes__single {
     width: 45%;
     margin-right: 20px;
@@ -484,7 +472,7 @@ footer a {
 .empty {
   position: relative;
   top: 5px;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   cursor: pointer;
 }
 .empty .full {
@@ -518,7 +506,7 @@ footer a {
     height: 400px;
   }
 }
-@media (min-width: 1100px) and (max-width: 1500px) {
+@media (min-width: 1100px) and (max-width: 1900px) {
   .diapo {
     width: 100%;
     height: 500px;
@@ -555,18 +543,18 @@ footer a {
   justify-content: space-between;
   align-items: center;
 }
-@media (min-width: 750px) and (max-width: 1500px) {
+@media (min-width: 750px) and (max-width: 1900px) {
   .menu__h2 {
     font-weight: 500;
     font-size: 1.4em;
   }
 }
-@media (min-width: 700px) and (max-width: 1500px) {
+@media (min-width: 700px) and (max-width: 1900px) {
   .menu__h2 .heart2 {
     font-size: 1.2em;
   }
 }
-@media (min-width: 1100px) and (max-width: 1500px) {
+@media (min-width: 1100px) and (max-width: 1900px) {
   .menu__article {
     display: flex;
     flex-direction: row;
@@ -640,7 +628,7 @@ footer a {
     width: 92%;
   }
 }
-@media (min-width: 1100px) and (max-width: 1500px) {
+@media (min-width: 1100px) and (max-width: 1900px) {
   .menu__bloc:hover .menu__bloc__text {
     width: 80%;
   }
@@ -687,9 +675,9 @@ footer a {
   color: #ffff;
   transform: rotate(0deg);
 }
-@media (min-width: 1100px) and (max-width: 1500px) {
+@media (min-width: 1100px) and (max-width: 1900px) {
   .menu__bloc {
-    width: 300px;
+    width: 90%;
   }
 }
 @media (min-width: 700px) and (max-width: 1099px) {
@@ -697,15 +685,19 @@ footer a {
     width: 70%;
   }
 }
-.menu .fade {
-  animation: fondu 2s 300ms;
-  animation-fill-mode: backwards;
+@media (min-width: 1100px) and (max-width: 1900px) {
+  .menu .fade {
+    width: 33%;
+  }
+}
+.menu .fade--1 {
+  animation: fondu 2s 800ms;
 }
 .menu .fade--2 {
-  animation: fondu 3s 300ms;
+  animation: fondu 4s 800ms;
 }
 .menu .fade--3 {
-  animation: fondu 4s 300ms;
+  animation: fondu 6s 800ms;
 }
 .menu .btn__center {
   display: flex;
@@ -727,7 +719,7 @@ footer a {
   opacity: 0.8;
   box-shadow: 0rem 0.2rem 0.2rem #909090;
 }
-@media (min-width: 700px) and (max-width: 1500px) {
+@media (min-width: 700px) and (max-width: 1900px) {
   .menu .btn__center button {
     font-size: 1.1em;
     width: 250px;

@@ -9,7 +9,7 @@
 @mixin h2 {
         font-weight: 500;
         font-size: $font-h2-mobile;
-        @media (min-width:750px) and (max-width:1500px){
+        @media (min-width:750px) and (max-width:1900px){
             font-weight: 500;
             font-size: $font-h2-plus;
         }
@@ -22,7 +22,7 @@
 @mixin p-size {
     font-size: $font-p-mobile;
     font-weight: 100;
-    @media (min-width:700px) and (max-width:1500px){
+    @media (min-width:700px) and (max-width:1900px){
         font-size: $font-p-plus;
     }
 
@@ -44,7 +44,7 @@
     }   
     & img{
         width: 150px;
-        @media (min-width:700px) and (max-width:1500px){
+        @media (min-width:700px) and (max-width:1900px){
             width: 200px;
         }
     }
@@ -54,7 +54,7 @@
     background-color: $background-tertiary;
     color: $color-button;
     padding: 20px;
-    @media (min-width:650px) and (max-width:1500px){
+    @media (min-width:650px) and (max-width:1900px){
 text-align: center;
     }
     & h2 {
@@ -104,7 +104,7 @@ text-align: center;
         opacity: 0.8;
         @include box-shadow-dark;
     }
-    @media (min-width:700px) and (max-width:1500px){
+    @media (min-width:700px) and (max-width:1900px){
         font-size: $font-p-plus;
         width: 250px;
         }
@@ -162,14 +162,6 @@ text-align: center;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-
-@mixin heart-full {
-        background: -o-linear-gradient(280deg, #FF79DA, #9356DC);
-        background: linear-gradient(170deg, #FF79DA, #9356DC );
-        transform: scale(0);
-        transition: -webkit-transform 150ms 50ms ease-in-out;
-        transition: transform 5s 5s ease-in-out;
 }
 
 @mixin load{

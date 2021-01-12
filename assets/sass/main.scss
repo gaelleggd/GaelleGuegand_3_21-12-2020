@@ -17,10 +17,6 @@ h2{
     @include h2;
 }
 
-p{
-    @include p-size;
-}
-
 a{
     text-decoration: none;
     color: black;
@@ -42,7 +38,7 @@ header {
         top: 15px;
         font-size: 1.5em;
         color: black;
-        @media (min-width:700px) and (max-width:1500px){
+        @media (min-width:700px) and (max-width:1900px){
             font-size: 1.7em;
             top: 15px;
         }
@@ -71,14 +67,12 @@ footer {
     font-weight: 500;
     z-index: -1;
     animation: spinner 3s;
-    animation-iteration-count: 1;
     @media (min-width:200px) and (max-width:449px){
         font-size: 1.1em;
         }  
 }
 
 .loader{
-    display: inline-block;
     position: relative;
 }
 
@@ -109,9 +103,6 @@ footer {
     background-color: $background-secondary;
     & i {
         padding-right: 3px;
-        // @media (min-width:700px) and (max-width:1500px){
-        //     height: 20px;
-        // }
     }
     & input{
         background-color: $background-secondary;
@@ -150,11 +141,11 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media (min-width:680px) and (max-width:1500px){
+    @media (min-width:680px) and (max-width:1900px){
         width: 90%;
     }
     &__bloc{
-        @media (min-width:750px) and (max-width:1500px){
+        @media (min-width:750px) and (max-width:1900px){
             display: flex;
             flex-direction: row;
             width: 100%;     
@@ -165,7 +156,7 @@ footer {
             position: relative;
             cursor: pointer;
             z-index: 0;
-            @media (min-width:680px) and (max-width:1500px){
+            @media (min-width:680px) and (max-width:1900px){
                 margin-right: 20px;
             }
             &:hover {
@@ -205,11 +196,6 @@ footer {
             & p {
                 font-weight: 500;
             }
-            // &:hover {
-            //     background-color: #F5EDFF;
-            //     cursor: pointer;
-            //     @include box-shadow-dark;
-            // }
         }
     }
 }
@@ -224,7 +210,7 @@ footer {
     &__cartes{
         display: flex;
         flex-direction: column;
-        @media (min-width:900px) and (max-width:1500px){
+        @media (min-width:900px) and (max-width:1900px){
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
@@ -241,7 +227,7 @@ footer {
             padding-bottom: 10px;
             @include bloc-radius;
             @include box-shadow;
-            @media (min-width:900px) and (max-width:1500px){
+            @media (min-width:900px) and (max-width:1900px){
                 width: 45%;
                 margin-right: 20px;        
             }
@@ -280,7 +266,7 @@ footer {
 .empty{
     position: relative;
     top: 5px;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     cursor: pointer;
     & .full{
         position: absolute;
@@ -317,7 +303,7 @@ footer {
     width: 100%;
     height: 400px;
     }
-    @media (min-width:1100px) and (max-width:1500px){
+    @media (min-width:1100px) and (max-width:1900px){
         width: 100%;
         height: 500px;
     }
@@ -351,13 +337,13 @@ footer {
         justify-content: space-between;
         align-items: center;
         & .heart2{
-            @media (min-width:700px) and (max-width:1500px){
+            @media (min-width:700px) and (max-width:1900px){
                 font-size: 1.2em;
             }
         }
     }
     &__article {
-        @media (min-width:1100px) and (max-width:1500px){
+        @media (min-width:1100px) and (max-width:1900px){
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -405,7 +391,7 @@ footer {
             @media (min-width:1000px) and (max-width:1099px){
                 width: 92%;
                 } 
-            @media (min-width:1100px) and (max-width:1500px){
+            @media (min-width:1100px) and (max-width:1900px){
                 width: 80%;
                 }          
         }
@@ -451,8 +437,8 @@ footer {
                 }
             }
         }
-        @media (min-width:1100px) and (max-width:1500px){
-        width: 300px;
+        @media (min-width:1100px) and (max-width:1900px){
+        width: 90%;
         }
     }
     @media (min-width:700px) and (max-width:1099px)
@@ -461,15 +447,19 @@ footer {
     }
 
     .fade{
-        animation: fondu 2s 300ms;
-        animation-fill-mode: backwards;
+        @media (min-width:1100px) and (max-width:1900px){
+            width: 33%;
+            }        
+    }
+    .fade--1{
+        animation: fondu 2s 800ms;
     }
     .fade--2{
-            animation: fondu 3s 300ms;
-        }
+        animation: fondu 4s 800ms;
+    }
     .fade--3{
-            animation: fondu 4s 300ms;
-        }
+        animation: fondu 6s 800ms;
+    }
 
 
 
